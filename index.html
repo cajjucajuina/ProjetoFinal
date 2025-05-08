@@ -9,24 +9,80 @@
 <body>
 
   <header>
-    <div class= "cabecalho">
-      <div class= "logo">
-        <img src="imagens/logo-header.svg" alt="Logo do site"></img>
+    <div class="cabecalho">
+      <div class="logo">
+        <img src="imagens/logo-header.svg" alt="Logo do site">
         </div>
 
-      <div class= "barra-pesquisa">
+      <div class="barra-pesquisa">
         <input type="search" name="barra" placeholder="Pesquisar">
-        <button type="lupa">
+        <button class="lupa">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <use xlink:href="imagens/glass-icon.svg">
+            </use>
+          </svg>
         </button>
-        </div>
+      </div>
 
-      <div class= "botao-primario">
-        <button class="btnrosa">Entrar</button>
+      <div class="botao-primario">
+        <button class="btnrosa" onclick="location.href='loginpage.html'">Entrar</button>
         </div>  <!-- todos os botoes rosa aqui -->
 
-      <div class= "carrinho">
-        <button class="cart">
-          <img src="imagens/mini-cart.svg" alt="Carrinho"></img>
+      <div class="carrinho" id="cart">
+        <button class="cart" onclick="togglecart()">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <use xlink:href="imagens/mini-cart.svg">
+            </use>
+            </svg>
             </button>
+            </div>
+            
+      </header>  
+
+
+      <div class="navegacao">
+        <div class="botao-secundario">  <!-- todos os botoes cinza/ sem bg aqui -->
+      <nav>
+          <button class="opcoes" onclick="novaaba('home')">Home</button>
+          <button class="opcoes" onclick="novaaba('produtos')">Produtos</button>
+          <button class="opcoes" onclick="novaaba('categorias')">Categorias</button>
+          <button class="opcoes" onclick="novaaba('meuspedidos')">Meus Pedidos</button>
+          <button class="btncinza" onclick="location.href='signinpage.html'">Cadastrar-se</button>
+      </nav>
+      </div>
+
+      <section id="home" class="secao" style="display: none;">
+      </section>
+
+      <section id="produtos" class="secao" style="display: none;">
+      </section>
+
+      <section id="categorias" class="secao" style="display: none;">
+      </section>
+
+      <section id="meuspedidos" class="secao" style="display: none;">
+      </section>
+
+      </div>  
+
+      <script>
+       function novaaba(secao)
+        {
+          const sessoes = document.querySelectorAll('.secao');
+    sessoes.forEach(s => s.style.display = 'none');
+
+          const secaoEscolhida = document.getElementById(secao);
+    secaoEscolhida.style.display = 'block';
+        }
+
+        function togglecart() 
+        {
+        const cart = document.getElementById('cart');
+    cart.classList.toggle('active');
+         }
+      </script> 
+
+
+
 </body>
 </html>
