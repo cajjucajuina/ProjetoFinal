@@ -35,8 +35,14 @@ body {
     gap: 10px;
     width: 100vw;
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
+    height: 200px;
+  margin: 0 auto;        
+  width: 100%;           
+  align-items: center;    
+  justify-content: center;
+  margin-top: -30px;
   }
 
   .logo {
@@ -53,22 +59,28 @@ body {
   .barra-pesquisa {
     margin-left: 70px;
     width: fit-content;
+    margin-bottom: 45px;
     position: relative;
   }
 
   .barra-pesquisa input[type="search"] {
-    padding: 20px 50px;
+    padding: 20px 50px 20px 25px;
     border-radius: 8px;
     border: none;
     background-color: var(--light-gray-3);
-    font-size: 15px;
+    font-size: 16px;
     width: 580px;
     letter-spacing: 0.5px;
   }
 
+  .barra-pesquisa input::placeholder {
+  color: var(--light-gray);
+  font-size: 16px;
+}
+
   .barra-pesquisa .lupa {
      position: absolute;
-    top: 29%;
+    top: 53%;
     right: 15px;
     transform: translateY(-50%);
     cursor: pointer;
@@ -87,25 +99,46 @@ body {
   }
 
   .opcoes {
-    display: flex;
     border: none;
-  background: transparent;
+    background: transparent;
   outline: none;
-  font-size: 19px;
-  color: var(--light-gray);
+  font-size: 17px;
+  color: var(--dark-gray-3);
+    letter-spacing: 0.5px;
   }
+
+  .opcoes-ativa {
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid;
+    background: transparent;
+    outline: none;
+    font-size: 17px;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    padding: 4px 0;
+  }
+
+  .botoes-nav nav {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 50px;
+}
 
   .btnrosa {
     position: relative;
     margin-left: 20px;
-    margin-top: 8px;
+    margin-bottom: 45px;
     padding: 12px 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: none;
     background-color: var(--primary);
     color: white;
     font-weight: bold;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
     font-size: 15px;
     width: 115px;
     }
@@ -114,7 +147,7 @@ body {
       border: none;
       background: transparent;
       margin-left: 60px;
-      margin-top: 20px;
+      margin-bottom: 40px;
     }
 
     .lupa {
