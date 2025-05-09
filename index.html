@@ -15,35 +15,14 @@
     <div class="cabecalho">
       <div class="logo">
         <img src="imagens/logo-header.svg" alt="Logo do site" draggable="false">
-        </div>
 
-      <div class="barra-pesquisa">
-        <input type="search" name="barra" placeholder="Pesquisar produto...">
-        <button class="lupa">
-          <img src="lupa" alt="Pesquisar" width="50" height="50">
-        </button>
-      </div>
-
-      <div class="botao-primario">
-        <button class="btnrosa" onclick="location.href='loginpage.html'">Entrar</button>
-        </div>  <!-- todos os botoes rosa aqui -->
-
-      <div class="carrinho" id="cart">
-        <button class="cart" onclick="togglecart()">
-            <img src="imagens/mini-cart.svg" alt="carrinho" width="50" height="50" draggable="false">
-            </button>
-            </div>
-      </header>  
-
-
-      <div class="navegacao">
-        <div class="botao-secundario">  <!-- todos os botoes cinza/ sem bg aqui -->
+              <div class="navegacao">
+        <div class="botoes-nav">
       <nav>
           <button class="opcoes" onclick="novaaba('home')">Home</button>
           <button class="opcoes" onclick="novaaba('produtos')">Produtos</button>
           <button class="opcoes" onclick="novaaba('categorias')">Categorias</button>
           <button class="opcoes" onclick="novaaba('meuspedidos')">Meus Pedidos</button>
-          <button class="btncinza" onclick="location.href='signinpage.html'">Cadastrar-se</button>
       </nav>
       </div>
 
@@ -60,6 +39,29 @@
       </section>
 
       </div>  
+        </div>
+
+      <div class="barra-pesquisa">
+        <input type="search" name="barra" placeholder="Pesquisar produto...">
+        <button class="lupa">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#8f8f8f" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="botoes-header">
+      <button class="btncinza" onclick="location.href='signinpage.html'">Cadastrar-se</button>
+        <button class="btnrosa" onclick="location.href='loginpage.html'">Entrar</button>
+        </div>
+        
+
+      <div class="carrinho" id="cart">
+        <button class="cart" onclick="togglecart()">
+            <img src="imagens/mini-cart.svg" alt="carrinho" width="24" height="24" draggable="false">
+            </button>
+            </div>
+      </header>  
+
 
       <script>
        function novaaba(secao)
